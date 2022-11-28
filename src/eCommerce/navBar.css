@@ -1,0 +1,68 @@
+ header{
+     position: fixed;
+    width: 100%;
+    z-index:1;
+    } 
+nav{
+    background-color: white;
+    height: 4rem;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed; */
+    border-top: 2px solid black;
+    border-bottom: 1px solid purple;
+
+}
+.free-delivery{
+    background-color: purple;
+    color: yellowgreen;
+    text-align: center;
+}
+
+.logo{
+    font-weight: 600;
+    width: 10.5rem;
+    padding-left: .7rem;
+    font-size: 1.5rem;
+}
+
+/* .nav-items{
+  width: 50rem;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  font-weight: 500;
+} */
+
+.cart{
+    font-size: 2rem;
+    padding-right: 1rem;
+    
+}
+ul{
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    list-style-type: none;
+    font-size: 18px;
+}
+
+.cart:hover{
+    
+    font-size: 2.05rem;
+}
+
+a:hover{
+    color:black;
+}
+
+.nav-items a:hover{
+    text-decoration: underline;
+}
+
+ul li{
+    margin: 1rem;
+    padding-top: .7rem;
+}
+

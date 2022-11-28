@@ -1,0 +1,13 @@
+.ship-panel {
+    height: 6rem;
+    display: flex;
+    background-color: purple;
+    justify-content: space-around;
+align-items: center;
+}
+
+.ship-panel i {
+    font-size: 4rem;
+     font-weight: 900;
+     color: black;
+}

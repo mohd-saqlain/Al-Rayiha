@@ -1,0 +1,41 @@
+.full-img{
+ padding: 1rem 0;   
+ /* width: 90%; */
+}
+.full-img img{
+    width: 100%;
+}
+
+.my-card{
+    margin: 1rem auto;
+    padding:0 3rem ;
+}
+
+.btn-tag{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-div{
+    
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    overflow: auto;
+    padding: 1rem;
+    /* background-color: yellow; */
+}
+
+.cart-btn{
+    margin-bottom: -1rem;
+    margin-top: 1rem;
+    width: 112%;
+}
+
+.card-title
+{
+    font-size: 1.1rem;
+    font-weight: 600;
+}

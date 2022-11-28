@@ -1,0 +1,23 @@
+
+ .img-div img{
+   border-radius: 10px;
+   min-width: 10rem;
+   width: 34rem;
+} 
+.img-main{
+    padding-top: 5.5rem;
+}
+.img-div{
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 1rem;
+}
+
+.img-div img:hover{
+    border-radius: 0px;
+    width: 34.1rem;
+    object-fit: cover;
+ } 
