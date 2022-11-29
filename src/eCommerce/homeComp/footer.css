@@ -1,0 +1,30 @@
+footer{
+    display: flex;
+    background-color: rgb(66, 4, 66);
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+ .footer-right{
+display: flex;
+/* margin-bottom: 1rem; */
+}
+
+.footer-right i{
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+p{
+    margin: 1rem;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.footer-right i:hover{
+ cursor: pointer;
+ 
+}

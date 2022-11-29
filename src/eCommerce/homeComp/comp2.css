@@ -23,7 +23,7 @@
     display: flex;
     width: auto;
     flex-direction: row;
-    overflow: auto;
+    overflow: hidden;
     padding: 1rem;
     /* background-color: yellow; */
 }
