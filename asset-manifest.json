@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Al-Rayiha/static/css/main.a61f5c8f.css",
-    "main.js": "/Al-Rayiha/static/js/main.90a1a443.js",
+    "main.css": "/Al-Rayiha/static/css/main.8da91b23.css",
+    "main.js": "/Al-Rayiha/static/js/main.117c1f1f.js",
     "static/js/787.a17bfaeb.chunk.js": "/Al-Rayiha/static/js/787.a17bfaeb.chunk.js",
     "index.html": "/Al-Rayiha/index.html",
-    "main.a61f5c8f.css.map": "/Al-Rayiha/static/css/main.a61f5c8f.css.map",
-    "main.90a1a443.js.map": "/Al-Rayiha/static/js/main.90a1a443.js.map",
+    "main.8da91b23.css.map": "/Al-Rayiha/static/css/main.8da91b23.css.map",
+    "main.117c1f1f.js.map": "/Al-Rayiha/static/js/main.117c1f1f.js.map",
     "787.a17bfaeb.chunk.js.map": "/Al-Rayiha/static/js/787.a17bfaeb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a61f5c8f.css",
-    "static/js/main.90a1a443.js"
+    "static/css/main.8da91b23.css",
+    "static/js/main.117c1f1f.js"
   ]
 }
