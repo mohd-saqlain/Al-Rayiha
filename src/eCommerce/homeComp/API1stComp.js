@@ -1,14 +1,14 @@
 const comp1Data = [
-  {
-    id: 1,
-    image1: "https://mohd-saqlain.github.io/Al-Rayiha/images/luxury-attar.jpg",
-    image2: "https://mohd-saqlain.github.io/Al-Rayiha/images/non-alcholic.webp",
-  },
-  {
-    id: 2,
-    image1: "https://mohd-saqlain.github.io/Al-Rayiha/images/perfume-spray-home.webp",
-    image2: "https://mohd-saqlain.github.io/Al-Rayiha/images/premium-attar.webp",
-  },
+   {
+     id: 1,
+     image1: "https://mohd-saqlain.github.io/Al-Rayiha/images/luxury-attar.jpg",
+     image2: "https://mohd-saqlain.github.io/Al-Rayiha/images/non-alcholic.webp",
+   },
+   {
+     id: 2,
+     image1: "https://mohd-saqlain.github.io/Al-Rayiha/images/perfume-spray-home.webp",
+     image2: "https://mohd-saqlain.github.io/Al-Rayiha/images/premium-attar.webp",
+   },
 ];
 
 const attar = [
@@ -71,6 +71,7 @@ const category = [
         price: 599,
       },
       {
+        idCat:786,
         image: "https://mohd-saqlain.github.io/Al-Rayiha/images/bakhoor-home-2.webp",
         name: "Al-Rayiha Taabish Luxury Unisex Non-Alcoholic Attar Perfume",
         price: 599,

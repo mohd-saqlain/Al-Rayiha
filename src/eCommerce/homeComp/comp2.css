@@ -23,10 +23,24 @@
     display: flex;
     width: auto;
     flex-direction: row;
-    overflow: hidden;
+    overflow: auto;
     padding: 1rem;
     /* background-color: yellow; */
 }
+
+.card-div::-webkit-scrollbar{
+    width: .5px;
+    height: 1px;
+}
+
+.card-div::-webkit-scrollbar-track{
+    background: white;
+}
+
+.card-div::-webkit-scrollbar-thumb{
+    background: rgb(53, 134, 134)
+}
+
 
 .cart-btn{
     margin-bottom: -1rem;
@@ -39,3 +53,5 @@
     font-size: 1.1rem;
     font-weight: 600;
 }
+
+

@@ -1,8 +1,14 @@
-import React from "react";
+import { React, useState } from "react";
 import "./comp2.css";
 import { attar, category } from "./API1stComp";
 
 const Comp2 = () => {
+  const [getData, setData] = useState([]);
+  function addCart(name, price) {
+    setData([...getData,{ name: name, price: price }]);
+    localStorage.setItem("cartItems", JSON.stringify(getData));
+  }
+
   return (
     <>
       {category.map((curElem) => {
@@ -26,7 +32,10 @@ const Comp2 = () => {
                             <button className="price btn btn-info btn-sm">
                               ₹{price}
                             </button>
-                            <a className=" btn btn-primary cart-btn" href="#">
+                            <a
+                              className=" btn btn-primary cart-btn"
+                              onClick={() => addCart(name, price)}
+                            >
                               Add to Cart
                             </a>
                           </div>
