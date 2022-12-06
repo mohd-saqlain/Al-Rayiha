@@ -9,8 +9,8 @@ const Comp1 = () => {
         const { id, image1, image2 } = curEle;
         return (
           <div className="img-div" key={id}>
-            <img src={image1} alt="image1" />
-            <img src={image2} alt="image2" />
+            <figure><img src={image1} alt="image1" /></figure>
+           <figure> <img src={image2} alt="image2" /></figure>
           </div>
         );
       })}

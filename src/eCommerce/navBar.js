@@ -13,10 +13,31 @@ const cartData = () => {
 const NavBar = () => {
   const [cartDis, setCartDis] = useState(0);
   const [items, setItems] = useState(cartData());
+  const [openMenu,setOpenMenu] =useState(true)
   const setDis = () => {
     setCartDis(1);
     setItems(cartData);
   };
+
+  const removeCartItem = (ind) => {
+    if (items) {
+      const newItems = items.filter((curEle, inde) => {
+        if (inde != ind) {
+          return curEle;
+        }
+      });
+      setItems(newItems);
+      localStorage.removeItem("cartItems");
+      localStorage.setItem("cartItems", JSON.stringify(newItems));
+    }
+
+  };
+    // const closeMenu = ()=>{
+    //   document.querySelector(".head-div").classList.remove("action");
+    // }
+    // const openMenu = ()=>{
+    //   document.querySelector(".head-div").classList.add("action");
+    // }
   return (
     <>
       <div
@@ -32,11 +53,20 @@ const NavBar = () => {
             <span>CART</span>
             <i className="fa-solid fa-xmark" onClick={() => setCartDis(0)}></i>
           </div>
-          {items.map((curEle) => {
+          {items.map((curEle, ind) => {
+            const { image, name, price } = curEle;
             return (
               <div className="s-item">
-                <p>{curEle.name}</p>
-                <p>{curEle.price}</p>
+                <figure className="cart-img">
+                  <img src={image} alt="CartImage" />
+                </figure>
+                <div className="cart-discr">
+                  <p>{name}</p>
+                  <span id="remove" onClick={() => removeCartItem(ind)}>
+                    Remove
+                  </span>
+                  <span id="price">₹ {price}</span>
+                </div>
               </div>
             );
           })}
@@ -47,11 +77,18 @@ const NavBar = () => {
           <div className="free-delivery">
             <span>Free delivery on all orders.</span>
           </div>
-          <nav className="nav-items">
+          <nav className={openMenu?"nav-items":"nav-items action"}>
+            <div className="menu-open">
+              <i class="fa-solid fa-bars" onClick={()=>setOpenMenu(false)}></i>
+            </div>
             <div className="logo">
+
               <i>Al-Rayiha</i>
             </div>
             <ul>
+              <div className="close-menu">
+              <i class="fa-solid fa-xmark" onClick={()=>setOpenMenu(true)}></i>
+              </div>
               <li>
                 <a href="#">Attar</a>
               </li>
@@ -79,6 +116,7 @@ const NavBar = () => {
                 ></i>
               </a>
             </div>
+            
           </nav>
         </div>
       </header>

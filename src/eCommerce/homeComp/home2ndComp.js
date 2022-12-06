@@ -1,13 +1,33 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "./comp2.css";
 import { attar, category } from "./API1stComp";
 
-const Comp2 = () => {
-  const [getData, setData] = useState([]);
-  function addCart(name, price) {
-    setData([...getData,{ name: name, price: price }]);
-    localStorage.setItem("cartItems", JSON.stringify(getData));
+const getLocalData = () => {
+  const dataJson = localStorage.getItem("cartItems");
+  if (dataJson) {
+    return JSON.parse(dataJson);
+  } else {
+    return [];
   }
+};
+
+const Comp2 = () => {
+  const [getData, setData] = useState(getLocalData());
+  // const [getData2, setData2] = useState();
+
+  function addCart(image, name, price) {
+    const newData = {
+      image: image,
+      name: name,
+      price: price,
+    };
+
+    setData([...getData, newData]);
+  }
+  // useEffect(()=>{
+  localStorage.setItem("cartItems", JSON.stringify(getData));
+
+  // },[getData]);
 
   return (
     <>
@@ -34,7 +54,7 @@ const Comp2 = () => {
                             </button>
                             <a
                               className=" btn btn-primary cart-btn"
-                              onClick={() => addCart(name, price)}
+                              onClick={() => addCart(image, name, price)}
                             >
                               Add to Cart
                             </a>
