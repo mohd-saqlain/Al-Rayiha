@@ -3,6 +3,7 @@ import "./comp3.css";
 const Comp3 = () => {
   return (
     <>
+    <div className="service">
       <div className="ship-panel">
         <div className="icon-div">
         <i className="fa-solid fa-truck-ramp-box"></i>
@@ -20,6 +21,7 @@ const Comp3 = () => {
           <p className="main-heading">EASY RETURN</p>
           <p className="sub-heading">Return product within 7 days of purchase</p>
         </div>
+      </div>
       </div>
     </>
   );

@@ -24,10 +24,7 @@ const Comp2 = () => {
 
     setData([...getData, newData]);
   }
-  // useEffect(()=>{
   localStorage.setItem("cartItems", JSON.stringify(getData));
-
-  // },[getData]);
 
   return (
     <>
@@ -43,8 +40,9 @@ const Comp2 = () => {
                 const { image, name, price } = curEle;
                 return (
                   <>
-                    <div className="my-card">
-                      <div className="card" style={{ width: "18rem" }}>
+                    <div className="my-card"> 
+                    {/* style={{ width: "18rem" }} */}
+                      <div className="card" >
                         <img src={image} alt="img" className="card-img-top" />
                         <div className="card-body">
                           <h5 className="card-title text-center">{name}</h5>
