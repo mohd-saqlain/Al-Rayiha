@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# Al-Rayiha --an ecommerce UI.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introducing the Perfume e-commerce project! This project is a fully-functional online store for perfumes, designed with a responsive user interface using React.js, HTML, CSS, and Bootstrap. It features an intuitive shopping experience, allowing users to easily browse and select their desired perfumes. The "Add to Cart" functionality is working smoothly, and the selected items are stored in local storage for the convenience of the user. Whether you're looking to buy a new fragrance or just browsing, this e-commerce store is a great option. We hope you enjoy using it
 
-## Available Scripts
+
 
 In the project directory, you can run:
 
