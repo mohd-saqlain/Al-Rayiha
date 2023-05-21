@@ -9,9 +9,7 @@ import Footer from './eCommerce/homeComp/footer'
 const App = () => {
   return (
     <>
-    <NavBar />
-    <Comp1 />
-    <Comp2 />
+       <Comp2 />
     <Comp3 />
     <Footer />
     </>

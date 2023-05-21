@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import "./comp2.css";
 import { attar, category } from "./API1stComp";
+import Comp1 from "./home1stComp";
 
 const getLocalData = () => {
   const dataJson = localStorage.getItem("cartItems");
@@ -13,7 +14,7 @@ const getLocalData = () => {
 
 const Comp2 = () => {
   const [getData, setData] = useState(getLocalData());
-  // const [getData2, setData2] = useState();
+  const [cartLen,setCartLen] = useState(getData.length)
 
   function addCart(image, name, price) {
     const newData = {
@@ -23,11 +24,17 @@ const Comp2 = () => {
     };
 
     setData([...getData, newData]);
+    setCartLen(getData.length)
   }
   localStorage.setItem("cartItems", JSON.stringify(getData));
 
+  useEffect(()=>{
+
+  },[getData])
+
   return (
     <>
+    <Comp1 cartLen={cartLen}/>
       {category.map((curElem) => {
         const { id, imageFull, cartItems } = curElem;
         return (
@@ -55,7 +62,7 @@ const Comp2 = () => {
                               onClick={() => addCart(image, name, price)}
                             >
                               Add to Cart
-                            </a>
+                                                         </a>
                           </div>
                         </div>
                       </div>

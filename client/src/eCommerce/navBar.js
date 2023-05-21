@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { React, useState } from "react";
 import "./navBar.css";
 
@@ -11,14 +11,17 @@ const cartData = () => {
   }
 };
 
-const NavBar = () => {
+const NavBar = ({cartLen}) => {
   const [cartDis, setCartDis] = useState(true);
   const [items, setItems] = useState(cartData());
   const [openMenu, setOpenMenu] = useState(true);
+  
 
   useEffect(() => {
     setItems(cartData());
   }, [cartDis]);
+
+  
   
   const removeCartItem = (ind) => {
     if (items) {
@@ -28,10 +31,14 @@ const NavBar = () => {
         }
       });
       setItems(newItems);
-      localStorage.removeItem("cartItems");
+    
+      localStorage.clear("cartItems");
       localStorage.setItem("cartItems", JSON.stringify(newItems));
     }
   };
+ 
+
+
   return (
     <>
       <header>
@@ -80,7 +87,8 @@ const NavBar = () => {
               <i
                 className="fa-solid fa-bag-shopping"
                 onClick={() => setCartDis(false)}
-              ></i>
+                style={{cursor:'pointer'}}
+              > <span className="cart-total">{cartLen}</span></i>
               {/* </a> */}
             </div>
             <div className="cart-main-div">
@@ -90,6 +98,7 @@ const NavBar = () => {
                   <i
                     className="fa-solid fa-xmark"
                     onClick={() => setCartDis(true)}
+                    
                   ></i>
                 </div>
                 {items.map((curEle, ind) => {
@@ -110,6 +119,7 @@ const NavBar = () => {
                   );
                 })}
               </div>
+              <h2></h2>
             </div>
           </nav>
         </div>
